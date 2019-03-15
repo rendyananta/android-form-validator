@@ -10,7 +10,7 @@ publishing {
             artifact("$buildDir/outputs/aar/form-validator-release.aar")
             groupId 'dev.poteto' // replace with your groupId
             artifactId 'android-form-validator' // replace with your artifactId
-            version '1.0.3'
+            version '1.0.0'
 
             //The publication doesn't know about our dependencies, so we have to manually add them to the pom
             pom.withXml {
@@ -60,8 +60,7 @@ android {
         targetSdkVersion 28
         versionCode 1
         versionName "1.0"
-
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
     }
 
