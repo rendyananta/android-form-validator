@@ -5,7 +5,7 @@
 
 ## Sample
 
-![](asset/demo.gif =240px)
+![](asset/demo.gif)
 
 #### Code 
 ```
