@@ -3,6 +3,46 @@
 
 [![Build Status](https://travis-ci.org/rendyyangasli/android-form-validator.svg?branch=master)](https://travis-ci.org/rendyyangasli/android-form-validator)
 
+## Sample
+
+![](asset/demo.gif)
+
+* Code 
+```
+class MainActivity : AppCompatActivity() {
+
+    private val validator = Validator()
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+
+        btn.setOnClickListener {
+            if (formsValidated()) {
+                // Do your magic
+            }
+        }
+    }
+
+    private fun formsValidated(): Boolean {
+        validator.buildRulesFor(field)
+            .required()
+            .min(15)
+            .build()
+
+        validator.buildRulesFor(field2)
+            .required()
+            .max(5)
+            .validEmail()
+            .onError {
+                Toast.makeText(this, it, Toast.LENGTH_SHORT).show()
+            }
+
+        return validator.check()
+    }
+}
+```
+
 ## Getting Started
 ### Installation
 
