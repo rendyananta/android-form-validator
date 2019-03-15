@@ -112,6 +112,9 @@ class ValidationRules (
         }
     }
 
+    /**
+     * Clear errors messages
+     */
     fun clearErrors() {
         editText?.let {
             it.error = null

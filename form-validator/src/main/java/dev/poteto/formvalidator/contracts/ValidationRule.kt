@@ -7,7 +7,7 @@ import dev.poteto.formvalidator.DataType
  * All rules must extend this class
  * @constructor apply target and message
  * @property target [CharSequence] to be validated
- * @property message [ValidationMessages] object
+ * @property messages [ValidationMessages] object
  * @property type [DataType] data type to be validated
  */
 abstract class ValidationRule(
