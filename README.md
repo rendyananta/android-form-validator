@@ -5,9 +5,9 @@
 
 ## Sample
 
-![](asset/demo.gif)
+![](asset/demo.gif =240px)
 
-* Code 
+#### Code 
 ```
 class MainActivity : AppCompatActivity() {
 
