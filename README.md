@@ -50,7 +50,7 @@ class MainActivity : AppCompatActivity() {
  * Using maven repository
  Add this line into your app build.gradle
 ```
-implementation 'dev.poteto:formvalidator:0.0.2'
+implementation 'dev.poteto:formvalidator:0.0.3'
 ```
 
 ### Usage
