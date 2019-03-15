@@ -1,8 +1,8 @@
-package dev.poteto.validated.rules
+package dev.poteto.formvalidator.rules
 
-import dev.poteto.validated.DataType
-import dev.poteto.validated.contracts.ValidationMessages
-import dev.poteto.validated.contracts.ValidationRule
+import dev.poteto.formvalidator.DataType
+import dev.poteto.formvalidator.contracts.ValidationMessages
+import dev.poteto.formvalidator.contracts.ValidationRule
 
 /**
  * Class for validating email

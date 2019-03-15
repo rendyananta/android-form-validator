@@ -1,6 +1,6 @@
-package dev.poteto.validated
+package dev.poteto.formvalidator
 
-import dev.poteto.validated.contracts.ValidationMessages
+import dev.poteto.formvalidator.contracts.ValidationMessages
 
 /**
  * Implementation of ValidationMessages Interface

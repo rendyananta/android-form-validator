@@ -1,4 +1,4 @@
-package dev.poteto.validated.contracts
+package dev.poteto.formvalidator.contracts
 
 /**
  * Interface for saving messages,

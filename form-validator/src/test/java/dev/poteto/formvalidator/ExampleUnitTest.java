@@ -1,4 +1,4 @@
-package dev.poteto.validated;
+package dev.poteto.formvalidator;
 
 import org.junit.Test;
 

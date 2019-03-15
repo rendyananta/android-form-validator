@@ -1,6 +1,6 @@
-package dev.poteto.validated.contracts
+package dev.poteto.formvalidator.contracts
 
-import dev.poteto.validated.DataType
+import dev.poteto.formvalidator.DataType
 
 /**
  * Abstract Class for validation rule

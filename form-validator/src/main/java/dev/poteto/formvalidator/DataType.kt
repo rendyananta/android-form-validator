@@ -1,4 +1,4 @@
-package dev.poteto.validated
+package dev.poteto.formvalidator
 
 /**
  * Supported validation data types

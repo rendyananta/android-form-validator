@@ -1,10 +1,10 @@
-package dev.poteto.validated
+package dev.poteto.formvalidator
 
 import android.widget.EditText
 import com.google.android.material.textfield.TextInputLayout
-import dev.poteto.validated.contracts.ValidationMessages
-import dev.poteto.validated.contracts.ValidationRule
-import dev.poteto.validated.rules.*
+import dev.poteto.formvalidator.contracts.ValidationMessages
+import dev.poteto.formvalidator.contracts.ValidationRule
+import dev.poteto.formvalidator.rules.*
 
 /**
  * Validation rules class

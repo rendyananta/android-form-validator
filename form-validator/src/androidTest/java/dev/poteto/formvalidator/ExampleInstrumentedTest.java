@@ -1,4 +1,4 @@
-package dev.poteto.validated;
+package dev.poteto.formvalidator;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

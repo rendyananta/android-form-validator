@@ -3,7 +3,7 @@ package dev.poteto.ourapp
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
-import dev.poteto.validated.Validator
+import dev.poteto.formvalidator.Validator
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {

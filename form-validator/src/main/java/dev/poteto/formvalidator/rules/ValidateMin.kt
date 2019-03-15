@@ -1,18 +1,18 @@
-package dev.poteto.validated.rules
+package dev.poteto.formvalidator.rules
 
-import dev.poteto.validated.DataType
-import dev.poteto.validated.contracts.ValidationMessages
-import dev.poteto.validated.contracts.ValidationRule
+import dev.poteto.formvalidator.DataType
+import dev.poteto.formvalidator.contracts.ValidationMessages
+import dev.poteto.formvalidator.contracts.ValidationRule
 
 /**
- * Validate Max
+ * Validate Min
  * This class is multi type target of validation
  * @property min
  * @param target inherit
  * @param messages inherit
  * @param type inherit
  */
-class ValidateMax(
+class ValidateMin(
     private val min: Int,
     target: CharSequence?,
     messages: ValidationMessages,
@@ -20,14 +20,14 @@ class ValidateMax(
 ) : ValidationRule(target, messages, type) {
 
     /**
-     * @return result of checking the limit value
+     * @return result of checking the minimal value
      * or minimal length of characters
      */
     override fun check(): Boolean {
         return if (type == DataType.INT) {
-            (target.toString().toIntOrNull() ?: 0) < min
+            (target.toString().toIntOrNull() ?: 0) > min
         } else {
-            (target?.length ?: 0) < min
+            (target?.length ?: 0) > min
         }
     }
 
@@ -36,9 +36,9 @@ class ValidateMax(
      */
     override fun getMessage(): String {
         return if (type == DataType.INT) {
-            messages.numberMax(min)
+            messages.numberMin(min)
         } else {
-            messages.charactersMax(min)
+            messages.charactersMin(min)
         }
     }
 }
