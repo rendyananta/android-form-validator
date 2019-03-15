@@ -13,14 +13,14 @@ import dev.poteto.formvalidator.rules.*
  * @property validatorInstance for chaining purpose
  * @property target [CharSequence] to be validated
  * @property messages [ValidationMessages] messages set to be used
- * @property type [DataType] is to know the type of validator to be used
  * while the validation comes to fails
+ * @property type [DataType] is to know the type of validator to be used
  */
 class ValidationRules (
     private val validatorInstance: Validator,
     private val target: CharSequence?,
     private val messages: ValidationMessages,
-    private val type: DataType = DataType.STRING
+    private val type: DataType
 ) {
 
     /**
@@ -45,8 +45,8 @@ class ValidationRules (
     /**
      * @constructor accept EditText
      */
-    constructor(validatorInstance: Validator, target: EditText, messages: ValidationMessages)
-            : this(validatorInstance, target.text.toString(), messages) {
+    constructor(validatorInstance: Validator, target: EditText, messages: ValidationMessages, type: DataType)
+            : this(validatorInstance, target.text.toString(), messages, type) {
         editText = target
     }
 

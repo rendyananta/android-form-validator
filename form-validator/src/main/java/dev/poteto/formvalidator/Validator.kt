@@ -20,20 +20,22 @@ class Validator (private val messages: ValidationMessages = DefaultMessage) {
 
     /**
      * @param target [EditText] to be validate
+     * @param type [DataType] to normalize the input
      * @return ValidationRules with target and message configured
      */
-    fun buildRulesFor(target: EditText): ValidationRules {
-        val rules = ValidationRules(this, target, messages)
+    fun buildRulesFor(target: EditText, type: DataType = DataType.STRING): ValidationRules {
+        val rules = ValidationRules(this, target, messages, type)
         fields.add(rules)
         return rules
     }
 
     /**
      * @param target [CharSequence] to be validate
+     * @param type [DataType] to normalize the input
      * @return ValidationRules with target and message configured
      */
-    fun buildRulesFor(target: CharSequence?): ValidationRules {
-        val rules = ValidationRules(this, target, messages)
+    fun buildRulesFor(target: CharSequence?, type: DataType = DataType.STRING): ValidationRules {
+        val rules = ValidationRules(this, target, messages, type)
         fields.add(rules)
         return rules
     }
