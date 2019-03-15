@@ -37,7 +37,7 @@ bintray {
     override = false
     publish = true
     pkg {
-        repo = 'android-form-validator' // replace with your Bintray repo name
+        repo = 'Android' // replace with your Bintray repo name
         name = project.name // library module name
         userOrg = 'rendyyangasli' // replace with your Bintray user name
         licenses = ['Apache-2.0']
