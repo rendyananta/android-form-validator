@@ -57,4 +57,9 @@ object DefaultMessage : ValidationMessages {
      */
     override fun charactersRange(from: Int, to: Int): String =
         "Karakter harus lebih dari $from dan kurang dari $to karakter"
+
+    /**
+     * @return error message invalid phone number
+     */
+    override fun phone(): String = "Masukkan nomor telepon dengan benar"
 }
