@@ -4,6 +4,8 @@ apply plugin: 'kotlin-android'
 apply plugin: 'com.github.dcendents.android-maven'
 apply plugin: 'com.jfrog.bintray'
 
+group='com.github.rendyyangasli'
+
 ext {
     bintrayRepo = 'Android'
     bintrayName = 'form-validator'
