@@ -178,4 +178,12 @@ class ValidationRules (
         appendRule(ValidateRange(from, to, target, messages, type))
         return this
     }
+
+    /**
+     * @see ValidatePhone class for details
+     */
+    fun phoneNumber(): ValidationRules {
+        appendRule(ValidatePhone(target, messages, type))
+        return this
+    }
 }

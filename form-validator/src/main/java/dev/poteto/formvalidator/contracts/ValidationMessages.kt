@@ -57,4 +57,9 @@ interface ValidationMessages {
      * @see to
      */
     fun charactersRange(from: Int, to: Int): String
+
+    /**
+     * @return [String] phone error message
+     */
+    fun phone(): String
 }
