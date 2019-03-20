@@ -51,7 +51,7 @@ class MainActivity : AppCompatActivity() {
  * Using jcenter 
  Add this line into your app build.gradle
 ```
-implementation 'dev.poteto:formvalidator:0.0.5'
+implementation 'dev.poteto:formvalidator:0.0.6'
 ```
 > Unfortunately, the way to importing library from jcenter is currently not working.
 Alternatively, use this library using jitpack repository, which will be explained below
@@ -68,7 +68,7 @@ allprojects {
 ```
 Then  add this into your app build.gradle
 ```
-implementation 'com.github.rendyyangasli:android-form-validator:0.0.5'
+implementation 'com.github.rendyyangasli:android-form-validator:0.0.6'
 ```
 
 
@@ -99,7 +99,7 @@ if (validator.check()) {
 ```
 
 > DataType is an enum class for `DataType.STRING` and `DataType.INT` type 
-> If you aren't passing the DataType parameter, the `STRING` **will be used as a default** DataType
+> If you are not passing the DataType parameter, the `STRING` **will be used as a default** DataType
 
 Or if you not want to invoke `buildRulesFor()` per statement, you can chain all the validation rules, you can invoke the `build()` method, then build your validation rules again
 Example using the `build()` method 
@@ -141,7 +141,11 @@ val customMessage = object : ValidationMessages {
 val validator = Validator(customMessage)
 ```
 Then you will be able to use the validator as usually with customized error messages. this is very useful when you're creating multilinguism app
-> Default error message is Indonesian, for English error message support, it will added soon. And we will make it as a default language. **We need help to supporting another language**
+
+###### Available Error Messages Languages
+* English (default)
+* Indonesian
+> **We need help to supporting another language**
 
 ##### Available Validation Rules
 * `required()` mark the field as required
