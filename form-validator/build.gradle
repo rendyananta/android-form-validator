@@ -11,7 +11,7 @@ ext {
     bintrayName = 'form-validator'
 
     publishedGroupId = 'dev.poteto'
-    libraryName = 'form-validator'
+    libraryName = 'formvalidator'
     artifact = 'formvalidator'
 
     libraryDescription = 'Library for validating forms may have many fields at once'
@@ -64,7 +64,7 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 
     implementation 'androidx.appcompat:appcompat:1.1.0-alpha02'
-    implementation 'androidx.core:core-ktx:1.1.0-alpha04'
+    implementation 'androidx.core:core-ktx:1.1.0-alpha05'
     implementation 'com.google.android.material:material:1.0.0'
 }
 repositories {

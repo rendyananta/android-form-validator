@@ -2,6 +2,7 @@ package dev.poteto.formvalidator
 
 import android.widget.EditText
 import dev.poteto.formvalidator.contracts.ValidationMessages
+import dev.poteto.formvalidator.messages.DefaultMessage
 
 /**
  * Main Validator class

@@ -3,6 +3,7 @@
 
 [![Build Status](https://travis-ci.org/rendyyangasli/android-form-validator.svg?branch=master)](https://travis-ci.org/rendyyangasli/android-form-validator)
 [![codebeat badge](https://codebeat.co/badges/dbc9d2b3-09aa-46e2-878b-933a85d620c9)](https://codebeat.co/projects/github-com-rendyyangasli-android-form-validator-master)
+[![Known Vulnerabilities](https://snyk.io/test/github/rendyyangasli/android-form-validator/badge.svg?targetFile=form-validator%2Fbuild.gradle)](https://snyk.io/test/github/rendyyangasli/android-form-validator?targetFile=form-validator%2Fbuild.gradle)
 
 ## Sample
 
@@ -29,7 +30,6 @@ class MainActivity : AppCompatActivity() {
         validator.buildRulesFor(field)
             .required()
             .min(15)
-            .build()
 
         validator.buildRulesFor(field2)
             .required()
@@ -48,11 +48,29 @@ class MainActivity : AppCompatActivity() {
 ### Installation
 
 ##### Adding into your project
- * Using maven repository
+ * Using jcenter 
  Add this line into your app build.gradle
 ```
-implementation 'dev.poteto:formvalidator:0.0.3'
+implementation 'dev.poteto:formvalidator:0.0.5'
 ```
+> Unfortunately, the way to importing library from jcenter is currently not working.
+Alternatively, use this library using jitpack repository, which will be explained below
+
+ * Using jitpack repository
+ Add this the code into your project build.gradle 
+```
+allprojects {
+    repositories {
+        ...
+        maven { url "https://jitpack.io" }
+    }
+}
+```
+Then  add this into your app build.gradle
+```
+implementation 'com.github.rendyyangasli:android-form-validator:0.0.5'
+```
+
 
 ### Usage
 ##### Default Usage
@@ -104,7 +122,7 @@ Passing EditText into the first parameter will automatically setting the error m
 Then, passing CharSequence will not show your errors into the views. you must invoke `onError` lamda to catch the error.
 
 
-#### Custom Error Callback
+##### Custom Error Callback
 ```
 validator.buildRulesFor(string)
     .required()
@@ -113,7 +131,7 @@ validator.buildRulesFor(string)
     }
 ```
 
-### Custom Error Messages 
+##### Custom Error Messages 
 It's so easy for you to customize the error message, you just need to create object and implement the `ValidationMessages` interface, then you should calling it when creating the `Validator` instance. e.g 
 ```
 val customMessage = object : ValidationMessages {
@@ -125,12 +143,13 @@ val validator = Validator(customMessage)
 Then you will be able to use the validator as usually with customized error messages. this is very useful when you're creating multilinguism app
 > Default error message is Indonesian, for English error message support, it will added soon. And we will make it as a default language. **We need help to supporting another language**
 
-### Available Validation Rules
+##### Available Validation Rules
 * `required()` mark the field as required
 * `validEmail()` to checking email
 * `min(minimalValue)` to checking minimal value 
 * `max(maximalValue)` to limit the user input
 * `range(min, max)` range user input, can be as characters or integer
+* `phone()` to check user input is match with phone number format
 
 ### Milestones
 Check the [issues](https://github.com/rendyyangasli/android-form-validator/issues)

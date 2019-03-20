@@ -1,4 +1,4 @@
-package dev.poteto.formvalidator
+package dev.poteto.formvalidator.messages
 
 import dev.poteto.formvalidator.contracts.ValidationMessages
 
@@ -11,36 +11,36 @@ object DefaultMessage : ValidationMessages {
     /**
      * @return the error messages of required field
      */
-    override fun required(): String = "Harus diisi"
+    override fun required(): String = "Field is required"
 
     /**
      * @param min characters needed
      * @return error messages of field with minimal characters
      */
-    override fun charactersMin(min: Int): String = "Jumlah karakter minimal $min"
+    override fun charactersMin(min: Int): String = "Characters must less than $min character"
 
     /**
      * @param max characters limit
      * @return error message of field with max characters exceed
      */
-    override fun charactersMax(max: Int): String = "Jumlah karakter tidak boleh melebihi $max"
+    override fun charactersMax(max: Int): String = "Characters must more than $max character"
 
     /**
      * @param min number needed
      * @return error message of field with minimal number
      */
-    override fun numberMin(min: Int): String = "Angka harus lebih dari $min"
+    override fun numberMin(min: Int): String = "Number must be more than $min"
 
     /**
      * @param max number limit
      * @return error message of field with max number exceed
      */
-    override fun numberMax(max: Int): String = "Angka tidak boleh melebihi $max"
+    override fun numberMax(max: Int): String = "Number must less than $max"
 
     /**
      * @return error message of field that have invalid email
      */
-    override fun email(): String = "Masukkan email dengan benar"
+    override fun email(): String = "Enter valid email address"
 
     /**
      * @param from [Int]
@@ -48,7 +48,7 @@ object DefaultMessage : ValidationMessages {
      * @return error message number out of range
      */
     override fun numberRange(from: Int, to: Int): String =
-        "Angka harus lebih dari $from dan kurang dari $to"
+        "Number must start $from and less than $to"
 
     /**
      * @param from [Int]
@@ -56,10 +56,10 @@ object DefaultMessage : ValidationMessages {
      * @return error message character length out of range
      */
     override fun charactersRange(from: Int, to: Int): String =
-        "Karakter harus lebih dari $from dan kurang dari $to karakter"
+        "Characters must more than $from and less than $to character"
 
     /**
      * @return error message invalid phone number
      */
-    override fun phone(): String = "Masukkan nomor telepon dengan benar"
+    override fun phone(): String = "Enter valid phone number"
 }
