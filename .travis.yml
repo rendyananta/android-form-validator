@@ -35,7 +35,7 @@ script:
 
 deploy:
   provider: script
-  script: ./gradlew :clean :form-validator:assembleRelease :form-validator:bintrayUpload
+  script: ./gradlew :clean :formvalidator:assembleRelease :formvalidator:bintrayUpload
   skip_cleanup: true
   dry-run: false
   on:

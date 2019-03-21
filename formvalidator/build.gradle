@@ -19,7 +19,7 @@ ext {
     siteUrl = 'https://github.com/rendyyangasli/android-form-validator'
     gitUrl = 'https://github.com/rendyyangasli/android-form-validator.git'
 
-    libraryVersion = '0.0.7'
+    libraryVersion = '0.0.8'
 
     developerId = 'rendyyangasli'
     developerName = 'Rendy Ananta'
