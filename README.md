@@ -51,7 +51,7 @@ class MainActivity : AppCompatActivity() {
  * Using jcenter 
  Add this line into your app build.gradle
 ```
-implementation 'dev.poteto:formvalidator:0.0.8'
+implementation 'dev.poteto:formvalidator:0.0.9'
 ```
 
  * Using jitpack repository
@@ -66,7 +66,7 @@ allprojects {
 ```
 Then  add this into your app build.gradle
 ```
-implementation 'com.github.rendyyangasli:android-form-validator:0.0.8'
+implementation 'com.github.rendyyangasli:android-form-validator:0.0.9'
 ```
 
 
@@ -77,7 +77,9 @@ You must invoke method `buildRulesFor()` in one statement only.
 
 ``` 
 // Create the validator instance
-val validator = Validator()
+val validator = Validator(INDONESIAN) 
+// Use this argument if you prefer using indonesian message over english error message
+// You can left the argument empty, it will using english error message as default
 
 // Find your views with traditional way
 val editText = findViewById<EditText>(R.id.field1)
@@ -119,6 +121,23 @@ Passing EditText into the first parameter will automatically setting the error m
 
 Then, passing CharSequence will not show your errors into the views. you must invoke `onError` lamda to catch the error.
 
+##### Custom Validation Rule
+If you need to write your own validation rules, then you can invoke `customRule()` method then implements the `ValidationRule` interface members
+
+```
+validator.buildRulesFor(field)
+    .required()
+    .customRule(object : ValidationRule {
+        override fun check(): Boolean {
+            return field1.text == field2.text
+        }
+        
+        override fun getMessage(): String {
+            return "value for field 1 must be the same with field 2"
+        }
+    })
+
+```
 
 ##### Custom Error Callback
 ```
@@ -142,7 +161,7 @@ Then you will be able to use the validator as usually with customized error mess
 
 ###### Available Error Messages Languages
 * English (default)
-* Indonesian
+* Indonesian (`INDONESIAN`)
 > **We need help to supporting another language**
 
 ##### Available Validation Rules

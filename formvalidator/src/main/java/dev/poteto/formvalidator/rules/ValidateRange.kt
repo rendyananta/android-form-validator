@@ -2,7 +2,7 @@ package dev.poteto.formvalidator.rules
 
 import dev.poteto.formvalidator.DataType
 import dev.poteto.formvalidator.contracts.ValidationMessages
-import dev.poteto.formvalidator.contracts.ValidationRule
+import dev.poteto.formvalidator.contracts.PredefinedValidationRule
 
 /**
  * Class to validating range number or characters length
@@ -18,7 +18,7 @@ class ValidateRange(
     target: CharSequence?,
     messages: ValidationMessages,
     type: DataType
-) : ValidationRule(target, messages, type) {
+) : PredefinedValidationRule(target, messages, type) {
 
     /**
      * Checking the number or string is between range

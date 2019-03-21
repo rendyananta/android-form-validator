@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import dev.poteto.formvalidator.Validator
+import dev.poteto.formvalidator.contracts.ValidationRule
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -25,6 +26,15 @@ class MainActivity : AppCompatActivity() {
         validator.buildRulesFor(field)
             .required()
             .min(15)
+            .customRule(object : ValidationRule {
+                override fun check(): Boolean {
+                    return true
+                }
+
+                override fun getMessage(): String {
+                    return ""
+                }
+            })
             .build()
 
         validator.buildRulesFor(field2)

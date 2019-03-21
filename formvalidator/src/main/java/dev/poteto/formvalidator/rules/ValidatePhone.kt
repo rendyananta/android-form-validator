@@ -3,7 +3,7 @@ package dev.poteto.formvalidator.rules
 import android.util.Patterns
 import dev.poteto.formvalidator.DataType
 import dev.poteto.formvalidator.contracts.ValidationMessages
-import dev.poteto.formvalidator.contracts.ValidationRule
+import dev.poteto.formvalidator.contracts.PredefinedValidationRule
 
 /**
  * Class for validating phone
@@ -12,7 +12,7 @@ class ValidatePhone(
     target: CharSequence?,
     messages: ValidationMessages,
     type: DataType
-) : ValidationRule(target, messages, type) {
+) : PredefinedValidationRule(target, messages, type) {
 
     /**
      * @return [Boolean] checking a valid phone number with a regex

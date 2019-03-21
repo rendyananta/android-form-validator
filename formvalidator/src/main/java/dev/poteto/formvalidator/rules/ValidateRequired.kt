@@ -2,7 +2,7 @@ package dev.poteto.formvalidator.rules
 
 import dev.poteto.formvalidator.DataType
 import dev.poteto.formvalidator.contracts.ValidationMessages
-import dev.poteto.formvalidator.contracts.ValidationRule
+import dev.poteto.formvalidator.contracts.PredefinedValidationRule
 
 /**
  * Class for checking the field is empty or not
@@ -15,7 +15,7 @@ class ValidateRequired(
     target: CharSequence?,
     messages: ValidationMessages,
     type: DataType
-) : ValidationRule(target, messages, type) {
+) : PredefinedValidationRule(target, messages, type) {
 
     /**
      * @return check the target is empty or not

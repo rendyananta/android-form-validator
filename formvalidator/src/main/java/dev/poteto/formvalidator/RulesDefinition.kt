@@ -3,6 +3,7 @@ package dev.poteto.formvalidator
 import android.widget.EditText
 import com.google.android.material.textfield.TextInputLayout
 import dev.poteto.formvalidator.contracts.ValidationMessages
+import dev.poteto.formvalidator.contracts.PredefinedValidationRule
 import dev.poteto.formvalidator.contracts.ValidationRule
 import dev.poteto.formvalidator.rules.*
 
@@ -16,7 +17,7 @@ import dev.poteto.formvalidator.rules.*
  * while the validation comes to fails
  * @property type [DataType] is to know the type of validator to be used
  */
-class ValidationRules (
+class RulesDefinition (
     private val validatorInstance: Validator,
     private val target: CharSequence?,
     private val messages: ValidationMessages,
@@ -82,13 +83,21 @@ class ValidationRules (
 
     /**
      * Append the rule into rules that will be checked per item
-     * @return [ValidationRule]
+     * @return [PredefinedValidationRule]
      */
     private fun appendRule(rule: ValidationRule): ValidationRule {
         // We append the rules, then return the
         // instance of validation rule
         rules.add(rule)
         return rule
+    }
+
+    /**
+     * Custom rule, user must implement these interface
+     */
+    fun customRule(rule: ValidationRule): RulesDefinition {
+        appendRule(rule)
+        return this
     }
 
     /**
@@ -139,7 +148,7 @@ class ValidationRules (
      * @see ValidateRequired class for details
      * @return this
      */
-    fun required(): ValidationRules {
+    fun required(): RulesDefinition {
         appendRule(ValidateRequired(target, messages, type))
         return this
     }
@@ -148,7 +157,7 @@ class ValidationRules (
      * @see ValidateMin class for details
      * @return this
      */
-    fun min(min: Int): ValidationRules {
+    fun min(min: Int): RulesDefinition {
         appendRule(ValidateMin(min, target, messages, type))
         return this
     }
@@ -157,7 +166,7 @@ class ValidationRules (
      * @see ValidateMax class for details
      * @return this
      */
-    fun max(max: Int): ValidationRules {
+    fun max(max: Int): RulesDefinition {
         appendRule(ValidateMax(max, target, messages, type))
         return this
     }
@@ -166,7 +175,7 @@ class ValidationRules (
      * @see ValidateEmail class for details
      * @return this
      */
-    fun validEmail(): ValidationRules {
+    fun validEmail(): RulesDefinition {
         appendRule(ValidateEmail(target, messages, type))
         return this
     }
@@ -174,7 +183,7 @@ class ValidationRules (
     /**
      * @see ValidateRange class for details
      */
-    fun range(from: Int, to: Int): ValidationRules {
+    fun range(from: Int, to: Int): RulesDefinition {
         appendRule(ValidateRange(from, to, target, messages, type))
         return this
     }
@@ -182,7 +191,7 @@ class ValidationRules (
     /**
      * @see ValidatePhone class for details
      */
-    fun phoneNumber(): ValidationRules {
+    fun phoneNumber(): RulesDefinition {
         appendRule(ValidatePhone(target, messages, type))
         return this
     }

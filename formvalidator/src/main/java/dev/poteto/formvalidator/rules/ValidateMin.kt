@@ -2,7 +2,7 @@ package dev.poteto.formvalidator.rules
 
 import dev.poteto.formvalidator.DataType
 import dev.poteto.formvalidator.contracts.ValidationMessages
-import dev.poteto.formvalidator.contracts.ValidationRule
+import dev.poteto.formvalidator.contracts.PredefinedValidationRule
 
 /**
  * Validate Min
@@ -17,7 +17,7 @@ class ValidateMin(
     target: CharSequence?,
     messages: ValidationMessages,
     type: DataType
-) : ValidationRule(target, messages, type) {
+) : PredefinedValidationRule(target, messages, type) {
 
     /**
      * @return result of checking the minimal value
