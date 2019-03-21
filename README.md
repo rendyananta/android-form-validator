@@ -53,8 +53,6 @@ class MainActivity : AppCompatActivity() {
 ```
 implementation 'dev.poteto:formvalidator:0.0.8'
 ```
-> Unfortunately, the way to importing library from jcenter is currently not working.
-Alternatively, use this library using jitpack repository, which will be explained below
 
  * Using jitpack repository
  Add this the code into your project build.gradle 
