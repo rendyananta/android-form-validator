@@ -3,7 +3,7 @@
 
 [![Build Status](https://travis-ci.org/rendyyangasli/android-form-validator.svg?branch=master)](https://travis-ci.org/rendyyangasli/android-form-validator)
 [![codebeat badge](https://codebeat.co/badges/dbc9d2b3-09aa-46e2-878b-933a85d620c9)](https://codebeat.co/projects/github-com-rendyyangasli-android-form-validator-master)
-[![Known Vulnerabilities](https://snyk.io/test/github/rendyyangasli/android-form-validator/badge.svg?targetFile=form-validator%2Fbuild.gradle)](https://snyk.io/test/github/rendyyangasli/android-form-validator?targetFile=form-validator%2Fbuild.gradle)
+[![Known Vulnerabilities](https://snyk.io/test/github/rendyyangasli/android-form-validator/badge.svg?targetFile=formvalidator%2Fbuild.gradle)](https://snyk.io/test/github/rendyyangasli/android-form-validator?targetFile=formvalidator%2Fbuild.gradle)
 
 ## Sample
 
