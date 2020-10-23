@@ -174,7 +174,7 @@ Function      		   | description
 `formatCurrency()`	   | to checking currency
 `range(min, max)`	   | range user input, can be as characters or integer
 `phone()`	           | change size text title
-`formatDate("dd-MM-yyyy")` |
+`formatDate("dd-MM-yyyy")` | to checking date
 
 ### Milestones
 Check the [issues](https://github.com/rendyyangasli/android-form-validator/issues)
