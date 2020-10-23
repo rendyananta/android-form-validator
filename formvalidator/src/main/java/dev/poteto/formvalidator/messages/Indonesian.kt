@@ -59,4 +59,7 @@ object Indonesian : ValidationMessages {
      */
     override fun phone(): String = "Masukkan nomor telepon dengan benar"
 
+    override fun currency(): String = "Masukkan nominal uang dengan benar"
+
+
 }

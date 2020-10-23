@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun formsValidated(): Boolean {
         validator.buildRulesFor(field)
-            .required()
+//            .required()
             .min(15)
             .customRule(object : ValidationRule {
                 override fun check(): Boolean {

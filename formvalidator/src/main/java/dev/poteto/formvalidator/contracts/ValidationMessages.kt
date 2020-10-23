@@ -62,4 +62,7 @@ interface ValidationMessages {
      * @return [String] phone error message
      */
     fun phone(): String
+
+    fun currency():String
+
 }
