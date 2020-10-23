@@ -61,5 +61,6 @@ object Indonesian : ValidationMessages {
 
     override fun currency(): String = "Masukkan nominal uang dengan benar"
 
+    override fun date(): String = "Enter valid date"
 
 }

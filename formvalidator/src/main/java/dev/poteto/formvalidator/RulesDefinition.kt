@@ -201,4 +201,9 @@ class RulesDefinition (
         return this
     }
 
+    fun formatDate(format:String):RulesDefinition{
+        appendRule(ValidateDate(format,target,messages,type))
+        return this
+    }
+
 }

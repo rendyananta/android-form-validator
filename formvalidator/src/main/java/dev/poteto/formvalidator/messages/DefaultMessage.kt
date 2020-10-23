@@ -65,4 +65,5 @@ object DefaultMessage : ValidationMessages {
 
     override fun currency(): String = "Enter valid currentcy"
 
+    override fun date(): String = "Masukkan tanggal dengan benar"
 }

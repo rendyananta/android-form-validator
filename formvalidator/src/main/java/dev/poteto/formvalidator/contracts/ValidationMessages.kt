@@ -65,4 +65,6 @@ interface ValidationMessages {
 
     fun currency():String
 
+    fun date(): String
+
 }
