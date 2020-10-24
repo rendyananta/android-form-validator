@@ -63,7 +63,13 @@ object DefaultMessage : ValidationMessages {
      */
     override fun phone(): String = "Enter valid phone number"
 
-    override fun currency(): String = "Enter valid currentcy"
+    /**
+     * @return error message invalid currency
+     */
+    override fun currency(): String = "Enter valid currency"
 
-    override fun date(): String = "Masukkan tanggal dengan benar"
+    /**
+     * @return error message invalid date
+     */
+    override fun date(): String = "Enter valid date"
 }

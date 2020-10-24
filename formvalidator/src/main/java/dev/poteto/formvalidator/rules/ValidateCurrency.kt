@@ -7,7 +7,7 @@ import java.util.regex.Matcher
 import java.util.regex.Pattern
 
 /**
- * Class for validating email
+ * Class for validating Currency
  * @param target inherit
  * @param messages inherit
  * @param type inherit
