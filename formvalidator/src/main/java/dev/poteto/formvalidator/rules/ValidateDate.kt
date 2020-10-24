@@ -22,7 +22,7 @@ class ValidateDate(
 ) : PredefinedValidationRule(target, messages, type) {
 
     /**
-     * Check the email is valid or not with regex method
+     * Check the date is valid or not with regex method
      */
     override fun check(): Boolean {
         val dateFormat = SimpleDateFormat(format)
@@ -38,15 +38,5 @@ class ValidateDate(
     /**
      * @return message when validation fails
      */
-    override fun getMessage(): String {
-
-        val dateFormat = SimpleDateFormat(format)
-        dateFormat.setLenient(false)
-        try {
-            dateFormat.parse(target.toString().trim { it <= ' ' })
-        } catch (pe: ParseException) {
-            return messages.date()
-        }
-        return ""
-    }
+    override fun getMessage(): String = messages.date()
 }

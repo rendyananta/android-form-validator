@@ -39,8 +39,9 @@ class MainActivity : AppCompatActivity() {
 
         validator.buildRulesFor(field2)
             .required()
-            .max(5)
-            .validEmail()
+//            .max(5)
+//            .validEmail()
+            .formatDate("dd-MM-yyyy")
             .onError {
                 Toast.makeText(this, it, Toast.LENGTH_SHORT).show()
             }

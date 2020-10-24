@@ -19,7 +19,7 @@ class ValidateCurrency(
 ) : PredefinedValidationRule(target, messages, type) {
 
     /**
-     * Check the email is valid or not with regex method
+     * Check the currency is valid or not with regex method
      */
     override fun check(): Boolean {
         val p: Pattern = Pattern.compile("^(?:0|[1-9]\\d{0,2}(?:\\.\\d{3})*),\\d{2}$")
@@ -33,12 +33,5 @@ class ValidateCurrency(
     /**
      * @return message when validation fails
      */
-    override fun getMessage(): String {
-        val p: Pattern = Pattern.compile("^(?:0|[1-9]\\d{0,2}(?:\\.\\d{3})*),\\d{2}$")
-        val m: Matcher = p.matcher(target.toString())
-        if (!m.matches()){
-            return messages.currency()
-        }
-        return ""
-    }
+    override fun getMessage(): String = messages.currency()
 }
