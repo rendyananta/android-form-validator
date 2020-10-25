@@ -165,12 +165,16 @@ Then you will be able to use the validator as usually with customized error mess
 > **We need help to supporting another language**
 
 ##### Available Validation Rules
-* `required()` mark the field as required
-* `validEmail()` to checking email
-* `min(minimalValue)` to checking minimal value 
-* `max(maximalValue)` to limit the user input
-* `range(min, max)` range user input, can be as characters or integer
-* `phone()` to check user input is match with phone number format
+Function      		   | description
+---------------------------| -------------
+`required()`  		   | mark the field as required
+`validEmail()`             | to checking email
+`min(minimalValue)` 	   | to checking minimal value
+`max(maximalValue)`        | to limit the user input
+`formatCurrency()`	   | to checking currency
+`range(min, max)`	   | range user input, can be as characters or integer
+`phone()`	           | change size text title
+`formatDate("dd-MM-yyyy")` | to checking date
 
 ### Milestones
 Check the [issues](https://github.com/rendyyangasli/android-form-validator/issues)

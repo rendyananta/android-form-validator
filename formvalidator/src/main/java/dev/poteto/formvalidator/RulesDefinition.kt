@@ -195,4 +195,21 @@ class RulesDefinition (
         appendRule(ValidatePhone(target, messages, type))
         return this
     }
+
+    /**
+     * @see ValidateCurrency class for details
+     */
+    fun formatCurrency(): RulesDefinition {
+        appendRule(ValidateCurrency(target, messages, type))
+        return this
+    }
+
+    /**
+     * @see ValidateDate class for details
+     */
+    fun formatDate(format:String):RulesDefinition{
+        appendRule(ValidateDate(format,target,messages,type))
+        return this
+    }
+
 }
