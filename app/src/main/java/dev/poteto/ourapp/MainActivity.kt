@@ -16,6 +16,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         btn.setOnClickListener {
+            @Suppress("ControlFlowWithEmptyBody")
             if (formsValidated()) {
                 // Do your magic
             }
@@ -24,7 +25,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun formsValidated(): Boolean {
         validator.buildRulesFor(field)
-//            .required()
+            .required()
             .min(15)
             .customRule(object : ValidationRule {
                 override fun check(): Boolean {
@@ -39,8 +40,7 @@ class MainActivity : AppCompatActivity() {
 
         validator.buildRulesFor(field2)
             .required()
-//            .max(5)
-//            .validEmail()
+            .max(5)
             .formatDate("dd-MM-yyyy")
             .onError {
                 Toast.makeText(this, it, Toast.LENGTH_SHORT).show()
