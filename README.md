@@ -48,12 +48,6 @@ class MainActivity : AppCompatActivity() {
 ### Installation
 
 ##### Adding into your project
- * Using jcenter 
- Add this line into your app build.gradle
-```
-implementation 'dev.poteto:formvalidator:0.0.9'
-```
-
  * Using jitpack repository
  Add this the code into your project build.gradle 
 ```
@@ -66,7 +60,7 @@ allprojects {
 ```
 Then  add this into your app build.gradle
 ```
-implementation 'com.github.rendyyangasli:android-form-validator:0.0.9'
+implementation 'com.github.rendyananta:android-form-validator:1.0.0'
 ```
 
 
