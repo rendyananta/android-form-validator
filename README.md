@@ -10,7 +10,7 @@
 ![](asset/demo.gif)
 
 #### Code 
-```
+```kotlin
 class MainActivity : AppCompatActivity() {
 
     private val validator = Validator()
@@ -50,13 +50,13 @@ class MainActivity : AppCompatActivity() {
 ##### Adding into your project
  * Using jcenter 
  Add this line into your app build.gradle
-```
+```groovy
 implementation 'dev.poteto:formvalidator:0.0.9'
 ```
 
  * Using jitpack repository
  Add this the code into your project build.gradle 
-```
+```groovy
 allprojects {
     repositories {
         ...
@@ -65,7 +65,7 @@ allprojects {
 }
 ```
 Then  add this into your app build.gradle
-```
+```groovy
 implementation 'com.github.rendyananta:android-form-validator:0.0.9'
 ```
 
@@ -75,7 +75,7 @@ implementation 'com.github.rendyananta:android-form-validator:0.0.9'
 
 You must invoke method `buildRulesFor()` in one statement only.
 
-``` 
+```kotlin
 // Create the validator instance
 val validator = Validator(INDONESIAN) 
 // Use this argument if you prefer using indonesian message over english error message
@@ -104,7 +104,7 @@ if (validator.check()) {
 Or if you not want to invoke `buildRulesFor()` per statement, you can chain all the validation rules, you can invoke the `build()` method, then build your validation rules again
 Example using the `build()` method 
 
-```
+```kotlin
 val validator = Validator();
 validator.buildRulesFor(editText1)
     .required()
@@ -124,7 +124,7 @@ Then, passing CharSequence will not show your errors into the views. you must in
 ##### Custom Validation Rule
 If you need to write your own validation rules, then you can invoke `customRule()` method then implements the `ValidationRule` interface members
 
-```
+```kotlin
 validator.buildRulesFor(field)
     .required()
     .customRule(object : ValidationRule {
@@ -140,7 +140,7 @@ validator.buildRulesFor(field)
 ```
 
 ##### Custom Error Callback
-```
+```kotlin
 validator.buildRulesFor(string)
     .required()
     .onError { msg -> 
@@ -150,7 +150,7 @@ validator.buildRulesFor(string)
 
 ##### Custom Error Messages 
 It's so easy for you to customize the error message, you just need to create object and implement the `ValidationMessages` interface, then you should calling it when creating the `Validator` instance. e.g 
-```
+```kotlin
 val customMessage = object : ValidationMessages {
     // you must implement the methods defined there
 }
