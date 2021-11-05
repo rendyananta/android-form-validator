@@ -66,7 +66,7 @@ allprojects {
 ```
 Then  add this into your app build.gradle
 ```
-implementation 'com.github.rendyyangasli:android-form-validator:0.0.9'
+implementation 'com.github.rendyananta:android-form-validator:0.0.9'
 ```
 
 
