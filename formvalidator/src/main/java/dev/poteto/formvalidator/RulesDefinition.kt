@@ -126,7 +126,12 @@ class RulesDefinition (
      */
     fun clearErrors() {
         editText?.let {
-            it.error = null
+            val parent = it.parent.parent
+            if (parent is TextInputLayout) {
+                parent.error = null
+            } else {
+                it.error = null
+            }
         }
     }
 
